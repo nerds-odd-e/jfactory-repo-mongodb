@@ -5,8 +5,6 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 
 import java.util.Collection;
 
-import static java.util.Collections.emptyList;
-
 public class MongoDBRepository implements DataRepository {
     private final MongoTemplate mongoTemplate;
 
@@ -16,7 +14,7 @@ public class MongoDBRepository implements DataRepository {
 
     @Override
     public <T> Collection<T> queryAll(Class<T> type) {
-        return emptyList();
+        return mongoTemplate.findAll(type);
     }
 
     @Override

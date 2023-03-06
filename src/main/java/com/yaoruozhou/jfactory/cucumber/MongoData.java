@@ -20,5 +20,6 @@ public class MongoData {
 
     @Then("All mongo data {string} should be:")
     public void all_mongo_data_should_be(String spec, String expression) {
+        jData.allShould(spec, expression);
     }
 }
