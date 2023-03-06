@@ -28,4 +28,9 @@ public class MongoData {
     public void existsMongoData(String spec, Table table) {
         jData.prepare(spec, table);
     }
+
+    @Then("Mongo data {string} should be:")
+    public void mongoDataShouldBe(String spec, String expression) {
+        jData.should(spec, expression);
+    }
 }

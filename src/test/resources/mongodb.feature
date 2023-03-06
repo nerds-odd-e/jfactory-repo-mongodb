@@ -27,3 +27,17 @@ Feature: Mongodb Data Repository
       someBoolean= true
     }]
     """
+
+  Scenario: Mongo data should be
+    Given Exists mongo data "Mongo":
+      | someString  | someInt | someBoolean |
+      | stringValue | 101     | true        |
+    Then Mongo data "Mongo.someString[stringValue]" should be:
+    """
+    = {
+      someString= stringValue
+      someInt= 101
+      someBoolean= true
+    }
+    """
+
