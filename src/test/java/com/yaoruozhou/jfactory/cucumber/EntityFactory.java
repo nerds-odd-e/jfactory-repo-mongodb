@@ -12,5 +12,6 @@ public class EntityFactory extends JFactory {
 
     private void configFactory() {
         register(Mongos.Mongo.class);
+        register(MongoWithBananas.MongoWithBanana.class);
     }
 }

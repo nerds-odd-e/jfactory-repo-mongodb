@@ -41,3 +41,16 @@ Feature: Mongodb Data Repository
     }
     """
 
+  Scenario: Exists mongo data with child object
+    Given Exists mongo data "MongoWithBanana":
+      | someString | banana.yaString |
+      | someString | bananaString    |
+    Then All mongo data "MongoWithBanana" should be:
+    """
+    = [{
+      someString= someString
+      banana= {
+        yaString= bananaString
+      }
+    }]
+    """

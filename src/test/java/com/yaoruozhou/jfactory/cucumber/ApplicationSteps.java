@@ -1,6 +1,7 @@
 package com.yaoruozhou.jfactory.cucumber;
 
 import com.yaoruozhou.jfactory.cucumber.entity.Mongo;
+import com.yaoruozhou.jfactory.cucumber.entity.MongoWithBanana;
 import io.cucumber.java.Before;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ public class ApplicationSteps {
     @Before
     public void clean() {
         mongoTemplate.dropCollection(Mongo.class);
+        mongoTemplate.dropCollection(MongoWithBanana.class);
+        mongoTemplate.dropCollection(MongoWithBanana.Banana.class);
     }
 
 }
