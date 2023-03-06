@@ -1,7 +1,7 @@
 Feature: Mongodb Data Repository
 
   Scenario: Exists n mongo data
-    Given Exists 1 es data "Mongo":
+    Given Exists 1 mongo data "Mongo":
     Then All mongo data "Mongo" should be:
     """
     : [{
