@@ -25,11 +25,11 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
     implementation("io.cucumber:cucumber-java:6.11.0")
     implementation 'com.github.leeonky:jfactory-cucumber:0.1.24'
-    implementation 'org.springframework.data:spring-data-mongodb:4.0.3'
+    implementation 'org.springframework.data:spring-data-mongodb:3.4.9'
 
     testImplementation("io.cucumber:cucumber-spring:6.11.0")
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.3'
-    testImplementation 'org.springframework.boot:spring-boot-starter-web:3.0.3'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.9'
+    testImplementation 'org.springframework.boot:spring-boot-starter-web:2.7.9'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
 }
 
